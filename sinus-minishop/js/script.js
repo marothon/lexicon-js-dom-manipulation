@@ -78,28 +78,38 @@ footElem.appendChild(aboutLinkElem.cloneNode(true));
 --              consectetur adipisicing elit. Saepe, dolores.           --
 --------------------------------------------------------------------------
 */
-const productElem = document.createElement('article');
-productElem.classList.add('art-4');
+// const productElem = document.createElement('article');
+// productElem.classList.add('art-4');
 
-const productFig = document.createElement('figure');
-const productImg = document.createElement('img');
-productImg.src = 'img/hoodie-forrest.png';
-productFig.appendChild(productImg);
+// const productFig = document.createElement('figure');
+// const productImg = document.createElement('img');
+// productImg.src = 'img/hoodie-forrest.png';
+// productFig.appendChild(productImg);
 
-const productHeading2 = document.createElement('h2');
-productHeading2.textContent = 'Sinus Hoodie';
+// const productHeading2 = document.createElement('h2');
+// productHeading2.textContent = 'Sinus Hoodie';
 
-const productHeading3 = document.createElement('h3');
-productHeading3.textContent = 'Forrest';
+// const productHeading3 = document.createElement('h3');
+// productHeading3.textContent = 'Forrest';
 
-const productDesc = document.createElement('p');
-productDesc.textContent = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, dolores.';
+// const productDesc = document.createElement('p');
+// productDesc.textContent = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, dolores.';
 
-const productBuyButtton = document.createElement('button');
-productBuyButtton.textContent ='add to cart';
+// const productBuyButtton = document.createElement('button');
+// productBuyButtton.textContent ='add to cart';
 
-productElem.append(productFig, productHeading2, productHeading3, productDesc, productBuyButtton);
-document.querySelector('main').appendChild(productElem);
+// productElem.append(productFig, productHeading2, productHeading3, productDesc, productBuyButtton);
+// document.querySelector('main').appendChild(productElem);
+
+document.querySelector('main').insertAdjacentHTML('beforeend',
+    "<article class='art-4'>\
+        <figure><img src='img/hoodie-forrest.png'></figure>\
+        <h2>Sinus Hoodie</h2>\
+        <h3>Forrest</h3>\
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, dolores.</p>\
+        <button>add to cart</button>\
+    </article>"
+);
 
 /* 
 
