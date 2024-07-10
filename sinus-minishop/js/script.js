@@ -58,16 +58,48 @@ document.querySelector('img.logo').classList.remove('logo');
 */
 
 // 12. Lägg till ett nytt menyalternativ.
+const aboutLinkElem = document.createElement('a');
+aboutLinkElem.href = '#';
+aboutLinkElem.textContent = 'About';
+const navElem = document.querySelector('header > nav');
+const navImgElem =  document.querySelector('header > nav > img');
+navElem.insertBefore(aboutLinkElem, navImgElem);
+const footElem = document.querySelector('footer > section > article:first-of-type');
+footElem.appendChild(aboutLinkElem.cloneNode(true));
 
 /* 13. Lägg till en ny produkt med följande info.
-------------------------------------------------------------------------------------------
--- tagg    -    beskrivning
--- img     -    hoodie-forrest.png
--- h2      -    Sinus Hoodie
--- h3      -    Forrest
--- p       -	Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, dolores.
-------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------
+-- tagg    -    beskrivning                                             --
+--------------------------------------------------------------------------
+-- img     -    hoodie-forrest.png                                      --
+-- h2      -    Sinus Hoodie                                            --
+-- h3      -    Forrest                                                 --
+-- p       -	Lorem ipsum dolor sit amet                              --
+--              consectetur adipisicing elit. Saepe, dolores.           --
+--------------------------------------------------------------------------
 */
+const productElem = document.createElement('article');
+productElem.classList.add('art-4');
+
+const productFig = document.createElement('figure');
+const productImg = document.createElement('img');
+productImg.src = 'img/hoodie-forrest.png';
+productFig.appendChild(productImg);
+
+const productHeading2 = document.createElement('h2');
+productHeading2.textContent = 'Sinus Hoodie';
+
+const productHeading3 = document.createElement('h3');
+productHeading3.textContent = 'Forrest';
+
+const productDesc = document.createElement('p');
+productDesc.textContent = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, dolores.';
+
+const productBuyButtton = document.createElement('button');
+productBuyButtton.textContent ='add to cart';
+
+productElem.append(productFig, productHeading2, productHeading3, productDesc, productBuyButtton);
+document.querySelector('main').appendChild(productElem);
 
 /* 
 
