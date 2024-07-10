@@ -51,7 +51,7 @@ document.querySelectorAll('button').forEach( pElem => {
 homeHeaderButtonElem.classList.add('active');
 
 // 11. Ta bort classen logo på logotypen.
-document.querySelector('img.logo').classList.remove('logo');
+// document.querySelector('img.logo').classList.remove('logo');
 
 /*
     ADD NEW CONTENT
@@ -117,8 +117,17 @@ document.querySelector('main').insertAdjacentHTML('beforeend',
 
 */
 // 14. Lyssna efter ett klick på logotypen (.logo). När den registrerar ett klick skall du console.log:a "found you!";
+document.querySelector('.logo').addEventListener('click', (event) => {
+    console.log("found you!");
+});
 
 // 15. Lyssna efter klick på samtliga produkter ( <article>). När den registrerar ett klick skall du console.log:a "Hi, Im article Fire / Ash / Water".
+document.querySelectorAll('main > article').forEach( (article) => {
+    article.addEventListener("click", (event) => {
+        const articleType = article.querySelector('h3').textContent;
+        console.log(`Hi, I'm article ${articleType}`);
+    });
+});
 
 
 
