@@ -30,16 +30,28 @@ fireHoodieBuyButtonElem.style.backgroundColor = 'rgb(236, 49, 49)';
 fireHoodieBuyButtonElem.style.color = 'rgb(255, 235, 81)'
 
 // 6. Byt bakgrundsfärg på någon av produkterna.
+const fireHoodieProductImgElem = document.querySelector('main > article.art-2 > figure');
+fireHoodieProductImgElem.style.backgroundColor = 'rgb(228, 104, 104)';
 
+const contactAddressElem = document.querySelector('footer > section > article:nth-of-type(2) > p');
 // 7. Byt ut adressen på sidan.
+contactAddressElem.innerHTML = 'Sinus skateboards<br>Birger Jarlsgatan 58<br>114 29 Stockholm';
 
 // 8. Byt färg på samtliga <p>.
+document.querySelectorAll('p').forEach( pElem => {
+    pElem.style.color = 'rgb(125, 98, 56)';
+});
 
 // 9. Ändra text på samtliga knappar till add to cart.
+document.querySelectorAll('button').forEach( pElem => {
+    pElem.textContent = 'add to cart';
+});
 
 // 10. Lägg till classen active på menyalternativet home.
+homeHeaderButtonElem.classList.add('active');
 
 // 11. Ta bort classen logo på logotypen.
+document.querySelector('img.logo').classList.remove('logo');
 
 /*
     ADD NEW CONTENT
