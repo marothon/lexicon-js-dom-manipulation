@@ -2,15 +2,32 @@
     DOM SELECTION
 */
 
-// 1.* Byt namn på första hoodien från *Ash* till Potato.
+// 1.* Byt namn på första hoodien från Ash till Potato.
+const firstHoodieTitleElem = document.querySelector('main > article.art-1 > h3');
+firstHoodieTitleElem.textContent = 'Potato';
 
 // 2. Byt namn på Home till Start.
+const homeHeaderButtonElem = document.querySelector('header > nav > a:nth-child(1)');
+homeHeaderButtonElem.textContent = 'Start';
+
+const homeFooterButtonElem = document.querySelector('footer > section > article:first-of-type > a:first-of-type');
+homeFooterButtonElem.textContent = 'Start';
 
 // 3. Byt namn på Contact till Mail Us.
+const contactHeaderButtonElem = document.querySelector('header > nav > a:nth-child(3)');
+contactHeaderButtonElem.textContent = 'Mail Us';
+
+const contactFooterButtonElem = document.querySelector('footer > section > article:first-of-type > a:nth-of-type(3)');
+contactFooterButtonElem.textContent = 'Mail Us';
 
 // 4. Byt ut informationen om Sinus Hoodie - Fire.
+const fireHoodieDescElem = document.querySelector('main > article.art-2 > p');
+fireHoodieDescElem.textContent = 'Upplev värmen med vår röda "Fire" hoodie. Tillverkad av mjuk bomull, erbjuder den komfort och stil i ett. Perfekt för kalla dagar eller kvällar.';
 
 // 5. Byt bakgrundsfärg och text på en knapp.
+const fireHoodieBuyButtonElem = document.querySelector('main > article.art-2 > button');
+fireHoodieBuyButtonElem.style.backgroundColor = 'rgb(236, 49, 49)';
+fireHoodieBuyButtonElem.style.color = 'rgb(255, 235, 81)'
 
 // 6. Byt bakgrundsfärg på någon av produkterna.
 
