@@ -33,8 +33,8 @@ fireHoodieBuyButtonElem.style.color = 'rgb(255, 235, 81)'
 const fireHoodieProductImgElem = document.querySelector('main > article.art-2 > figure');
 fireHoodieProductImgElem.style.backgroundColor = 'rgb(228, 104, 104)';
 
-const contactAddressElem = document.querySelector('footer > section > article:nth-of-type(2) > p');
 // 7. Byt ut adressen på sidan.
+const contactAddressElem = document.querySelector('footer > section > article:nth-of-type(2) > p');
 contactAddressElem.innerHTML = 'Sinus skateboards<br>Birger Jarlsgatan 58<br>114 29 Stockholm';
 
 // 8. Byt färg på samtliga <p>.
@@ -124,11 +124,7 @@ document.querySelector('.logo').addEventListener('click', (event) => {
 // 15. Lyssna efter klick på samtliga produkter ( <article>). När den registrerar ett klick skall du console.log:a "Hi, Im article Fire / Ash / Water".
 document.querySelectorAll('main > article').forEach( (article) => {
     article.addEventListener("click", (event) => {
-        const articleType = article.querySelector('h3').textContent;
+        const articleType = event.currentTarget.querySelector('h3').textContent;
         console.log(`Hi, I'm article ${articleType}`);
     });
 });
-
-
-
-
